@@ -1,0 +1,110 @@
+@CHARSET "ISO-8859-1";
+.container{
+	margin:auto;
+	max-width:1000px;
+}
+
+.box{
+	display: inline-block;;
+	text-align: right;
+	   border: 1px solid black;
+	   
+	 }
+    .pass-form{
+		display:none;
+	    position:fixed;
+	    z-index:1;
+	    width:100%;
+	    height:100%;
+	    left:0;
+	    top:0;
+ 	    background-color: rgba(0,0,0,0.4);
+	    overflow:auto;
+		}
+	.pass-detail{
+		   background-color:white;
+		   border:1px solid black;
+		   float:right;
+		   width:350px;
+		   min-height:100%;
+		}	 
+    .seats{
+        text-align: right;
+		display:inline-block;
+		padding:3px;
+		margin:3px;
+		height:16px;
+		width:16px;
+		border:1px solid black;
+		cursor:pointer;
+		}
+	.disable{
+	    text-align: right;
+		display:inline-block;
+		padding:3px;
+		margin:3px;
+		height:16px;
+		width:16px;
+		background-color:#a0a0a0;
+		color:#ffffff;
+		border:1px solid black;
+		cursor:default;
+	}
+	.seats:hover{
+		border:none;
+		color:white;
+	    background-color:rgb(0,100,195);
+		}
+	.selected{
+		border:none;
+	 	color:white;
+	    background-color:rgb(0,100,195);
+		}
+	.selected:hover{
+		border:1px solid black;
+		}
+	.book:hover{
+		box-shadow:2px 2px black;
+		}
+		.dropbtn{
+	      text-decoration:none;
+	      cursor: pointer;
+		  background-color: #ffffff;
+          border:none;
+          color: #000000;
+	      font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif; 
+	      padding: 10px 24px;
+	      padding-top: 17px;
+	      font-size: 14px;
+	       
+	}
+	.dropdown{
+	    display: none;
+	    float: right;
+		overflow:hidden;
+	    	
+	  }		
+    .content{
+		display: none;
+		position:absolute;
+		background-color:#f1f1f1;
+		min-width:160px;
+		box-shadow:0px 8px 16px 0px rbga(0,0,0,0.2);
+		z-index:1;
+		}
+	.content a{
+		float:none;
+		color:black;
+		text-decoration:none;
+		display:block;
+		padding:12px 16px;
+		}	
+	.content a:hover{
+	     background-color:#e5e5e5;	
+		}	
+	.dropdown:hover .content{
+		display: block;
+		}	
+	.dropdown:hover .dropbtn{
+		border-bottom: 3px solid rgb(0,100,195);
+		}	
