@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 Jul, 2017 4:55:32 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="modal.Bus" table="bus" catalog="easybus" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="id" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="type" type="string">
+            <column name="type" />
+        </property>
+        <property name="start" type="string">
+            <column name="start" />
+        </property>
+        <property name="dest" type="string">
+            <column name="dest" />
+        </property>
+        <property name="departure" type="timestamp">
+            <column name="departure" length="19" />
+        </property>
+        <property name="arrival" type="timestamp">
+            <column name="arrival" length="19" />
+        </property>
+        <property name="noSeats" type="int">
+            <column name="noSeats" not-null="true" />
+        </property>
+        <property name="description" type="string">
+            <column name="description" />
+        </property>
+        <set name="tickets" table="ticket" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="busid" />
+            </key>
+            <one-to-many class="modal.Ticket" />
+        </set>
+    </class>
+</hibernate-mapping>

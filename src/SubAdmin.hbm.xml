@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 25 Jul, 2017 6:31:09 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="easybus" name="modal.SubAdmin" optimistic-lock="version" table="subadmin">
+    <id name="userName" type="string">
+      <column name="userName"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="password" type="string">
+      <column name="password"/>
+    </property>
+  </class>
+</hibernate-mapping>
